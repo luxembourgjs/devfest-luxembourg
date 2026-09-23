@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Roboto+Condensed:wght@700;900&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import 'tailwindcss';
+
+:root {
+  --google-blue: #4285f4;
+  --google-red: #ea4335;
+  --google-yellow: #fbbc05;
+  --google-green: #34a853;
+  --google-gray: #9aa0a6;
+  --google-darkgray: #5f6368;
+  --navbar-height: 5rem;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  line-height: 1.6;
+  color: #1a1a1a;
+  overflow-x: hidden;
+  background: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #4285f4;
+  border-radius: 3px;
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-18px) rotate(1deg); }
+}
+@keyframes float-mid {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(-1deg); }
+}
+@keyframes float-fast {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+.float-slow { animation: float-slow 7s ease-in-out infinite; }
+.float-mid  { animation: float-mid  5s ease-in-out infinite; }
+.float-fast { animation: float-fast 3.5s ease-in-out infinite; }
+
+@keyframes vip-gradient {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes sparkle-1 {
+  0%, 100% { opacity: 0; transform: scale(0.4) rotate(0deg); }
+  50%       { opacity: 1; transform: scale(1)   rotate(180deg); }
+}
+@keyframes sparkle-2 {
+  0%, 100% { opacity: 0; transform: scale(0.3) rotate(0deg); }
+  40%       { opacity: 1; transform: scale(0.9) rotate(120deg); }
+}
+@keyframes sparkle-3 {
+  0%, 100% { opacity: 0; transform: scale(0.5) rotate(0deg); }
+  60%       { opacity: 1; transform: scale(1.1) rotate(240deg); }
+}
+.vip-card-header {
+  background: linear-gradient(135deg, #ff6fd8 0%, #f953c6 25%, #b91d73 55%, #ff6fd8 100%);
+  background-size: 250% 250%;
+  animation: vip-gradient 5s ease-in-out infinite;
+}
+.vip-card-border {
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  box-shadow: 0 0 0 2px #f953c6, 0 12px 40px rgba(249,83,198,0.35);
+  transform: none !important;
+  transition: box-shadow 0.2s;
+}
+.vip-card-border:hover {
+  transform: none !important;
+}
+.sparkle-1 { animation: sparkle-1 2.4s ease-in-out infinite; }
+.sparkle-2 { animation: sparkle-2 3.1s ease-in-out infinite 0.6s; }
+.sparkle-3 { animation: sparkle-3 2.8s ease-in-out infinite 1.2s; }
+.sparkle-4 { animation: sparkle-1 3.5s ease-in-out infinite 0.9s; }
+.sparkle-5 { animation: sparkle-2 2.2s ease-in-out infinite 1.8s; }
+
+@keyframes btn-gradient-flow {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.btn-register {
+  background: linear-gradient(
+    120deg,
+    #4285f4 0%,
+    #34a853 25%,
+    #fbbc05 50%,
+    #ea4335 75%,
+    #4285f4 100%
+  );
+  background-size: 250% 250%;
+  animation: btn-gradient-flow 4s ease infinite;
+  color: #fff;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-register::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0) 60%);
+  pointer-events: none;
+}
+.btn-register:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 32px rgba(66,133,244,0.45);
+}
+.btn-register:active {
+  transform: translateY(0);
+}
+
+@keyframes carousel-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.partner-carousel-track {
+  animation: carousel-scroll 28s linear infinite;
+}
+.partner-carousel-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes lux-color-flow {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+.lux-animated {
+  background: linear-gradient(
+    90deg,
+    #4285f4 0%,
+    #4285f4 15%,
+    #ea4335 30%,
+    #ea4335 45%,
+    #fbbc05 58%,
+    #fbbc05 70%,
+    #34a853 82%,
+    #4285f4 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: lux-color-flow 8s linear infinite;
+}

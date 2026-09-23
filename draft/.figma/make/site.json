@@ -1,0 +1,10 @@
+{
+  "description": "Showcases a DevFest event in Luxembourg with event details and speaker profiles, providing attendees with essential information and updates.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
