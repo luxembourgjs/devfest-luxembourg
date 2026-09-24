@@ -7,7 +7,7 @@ import "./index.css"
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Routes>
         <Route path="/draft" element={<App />} />
         <Route path="/draft/*" element={<App />} />
