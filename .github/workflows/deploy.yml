@@ -49,7 +49,7 @@ jobs:
 
       - name: Build
         env:
-          BASE_PATH: ${{ steps.pages.outputs.base_path }}
+          BASE_PATH: /
         run: pnpm run build
 
       - name: Copy index.html to 404.html for SPA support
