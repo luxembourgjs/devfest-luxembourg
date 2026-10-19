@@ -35,7 +35,7 @@ import logoLuxEureka3 from "@/imports/luxeureka3.png"
 import logoLuxEureka4 from "@/imports/luxeureka4.png"
 import logoLuxembourg from "@/imports/luxembourg-lmih.png"
 import logoGDGLuxembourg from "@/imports/gdg-luxembourg3.png"
-
+import "./index.css"
 // ─── Luxembourg Flag Logo ──────────────────────────────────────────────────────
 
 function LuxembourgFlagLogo({ size = 40 }: { size?: number }) {
