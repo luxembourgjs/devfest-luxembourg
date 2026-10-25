@@ -191,7 +191,7 @@ export default function ComingSoon() {
               Big ideas. Brilliant minds.{" "}
               <strong>
                 Four amazing tech communities: GDG, FoF Luxembourg, LuxTech Pulse,
-                Uni.lu
+                Luxembourg University Students
               </strong>
             </p>
             <p className="supporting">
